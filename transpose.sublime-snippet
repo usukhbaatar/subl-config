@@ -1,0 +1,28 @@
+<snippet>
+	<content>
+		<![CDATA[
+${1:vvi transpose(vvi &adj) {
+	vvi t(adj.size());
+	int n = (int)adj.size();
+	rep(i, n) {
+		for (auto &x : adj[i]) {
+			t[x].pb(i);
+		\}
+	\}
+	return t;
+\}}
+${2:// vvii transpose(vvii &adj) {
+// 	vvi t(adj.size());
+// 	int n = (int)adj.size();
+// 	rep(i, n) {
+// 		for (auto &x : adj[i]) {
+// 			t[x.ff].pb({i, x.ss\});
+// 		\}
+// 	\}
+// 	return t;
+// \}}
+]]>
+	</content>
+	<tabTrigger>#transpose</tabTrigger>
+	<scope> source.c++ </scope>
+</snippet>

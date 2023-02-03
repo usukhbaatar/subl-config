@@ -1,0 +1,16 @@
+{
+	"bootstrapped": true,
+	"installed_packages":
+	[
+		"A File Icon",
+		"Darkula Color Scheme",
+		"Markdown Extended",
+		"MarkdownEditing",
+		"Material Theme",
+		"Package Control",
+		"Vue Syntax Highlight",
+	],
+	"in_process_packages":
+	[
+	],
+}

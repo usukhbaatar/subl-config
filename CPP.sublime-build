@@ -1,0 +1,6 @@
+{
+	"shell_cmd": "g++ -std=c++17 \"${file}\" -o \"/home/lunarian/code/out/${file_base_name}\" && /home/lunarian/code/out/${file_base_name}</home/lunarian/code/out/in.txt>/home/lunarian/code/out/out.txt",
+    "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+    "working_dir": "${file_path}",
+    "selector": "source.c++"
+}

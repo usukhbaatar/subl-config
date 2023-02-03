@@ -1,0 +1,35 @@
+<snippet>
+	<content>
+		<![CDATA[
+struct DSU {
+	vi p, w;
+	int groups;
+	DSU(int n, int start = 1) {
+		groups = n;
+		p.resize(n + start, -1);
+		w.resize(n + start, 1);
+	}
+	bool is_root(int x) {
+		return p[x] == -1;
+	}
+	int find(int x) {
+		if (is_root(x)) return x;
+		return p[x] = find(p[x]);
+	}
+	bool merge(int x, int y) {
+		x = find(x), y = find(y);
+		if (x == y) return 0;
+		if (w[y] > w[x]) swap(x, y);
+		w[x] += w[y]; w[y] = 0;
+		p[y] = x; groups--;
+		return 1;
+	}
+	int size() {
+		return groups;
+	}
+};
+]]>
+	</content>
+	<tabTrigger>#dsu</tabTrigger>
+	<scope> source.c++ </scope>
+</snippet>

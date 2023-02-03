@@ -1,0 +1,25 @@
+<snippet>
+	<content>
+		<![CDATA[
+int N, bit[400001];
+
+void update(int i, int x = 1) {
+	while (i <= N) {
+		bit[i] += x;
+		i += (i & -i);
+	}
+}
+
+int query(int i) {
+	int ret = 0;
+	while (i > 0) {
+		ret += bit[i];
+		i -= (i & -i);
+	}
+	return ret;
+}
+]]>
+	</content>
+	<tabTrigger>#bit</tabTrigger>
+	<scope> source.c++ </scope>
+</snippet>

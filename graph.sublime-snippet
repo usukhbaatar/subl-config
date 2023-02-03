@@ -1,0 +1,24 @@
+<snippet>
+	<content>
+		<![CDATA[
+int n, m; cin >> n >> m;
+${1:vvi adj(n + 1);
+rep(i, m) {
+	int u, v;
+	cin >> u >> v;
+	adj[u].pb(v);
+	adj[v].pb(u);
+\}}
+${2:// vvii adj(n + 1);
+// rep(i, m) {
+// 	int u, v, e;
+// 	cin >> u >> v >> e;
+// 	adj[u].pb({v, e\});
+// 	adj[v].pb({u, e\});
+// \}
+}
+]]>
+	</content>
+	<tabTrigger>#graph</tabTrigger>
+	<scope> source.c++ </scope>
+</snippet>
